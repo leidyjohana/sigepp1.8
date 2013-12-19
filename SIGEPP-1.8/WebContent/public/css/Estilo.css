@@ -1,0 +1,686 @@
+@CHARSET "UTF-8";
+
+/* Componentes */
+
+/* Containers */
+.z-caption {
+	
+}
+
+.z-div {
+	
+}
+
+.z-groupbox {
+	
+}
+
+.z-idspace {
+	
+}
+.z-panel{
+background-color:#CAD0D4;
+}
+.z-panelchildren {
+	
+}
+
+.z-span {
+	
+}
+
+.z-tabbox {
+	
+}
+
+.z-tab {
+	
+}
+
+.z-tabs {
+	
+}
+
+.z-tabpanel {
+	
+}
+
+.z-tabpanels {
+	
+}
+
+.z-window {
+	
+}
+
+
+/* Data  */
+
+div.z-grid-body {
+	background: #f4f2f2;
+}
+
+div.z-grid-header tr.z-auxhead {
+	background: #FF7925;
+}
+
+.z-auxheader-cnt  {
+	font-weight: bold;
+	font-size: 1em;
+	color: #001F83;
+}
+
+.z-column {
+	
+}
+
+.z-columns {
+	
+}
+
+.z-detail {
+	
+}
+
+.z-foot {
+	
+}
+
+.z-footer {
+	
+}
+
+.z-group {
+	
+}
+
+.z-groupfoot {
+	
+}
+
+.z-row {
+	
+}
+
+/* Color de las filas del grig */
+tr.z-row td.z-row-inner {
+	background: #f4f2f2;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #F7BE81;
+}
+
+.z-rows {
+	
+}
+
+
+.z-listbox {
+	
+}
+
+.z-listcell {
+	
+}
+
+.z-listfoot {
+	
+}
+
+.z-listfooter {
+	
+}
+
+.z-listgroup {
+	
+}
+
+.z-listgroupfoot {
+	
+}
+
+.z-listhead {
+	
+}
+
+.z-listheader {
+	
+}
+
+.z-listitem {
+	
+}
+
+.z-tree {
+	
+}
+
+.z-treecell {
+	
+}
+
+.z-treechildren {
+	
+}
+
+.z-treecol {
+	
+}
+
+.z-treecols {
+	
+}
+
+.z-treefoot {
+	
+}
+
+.z-treefooter {
+	
+}
+
+.z-treeitem {
+	
+}
+
+.z-treerow {
+	
+}
+
+.z-biglistbox {
+	
+}
+
+/* Diagrams and Reports */
+.z-chart {
+	
+}
+
+.z-flashchart {
+	
+}
+
+.z-fusionchart {
+	
+}
+
+.z-gmaps {
+	
+}
+
+.z-gimage {
+	
+}
+
+.z-ginfo {
+	
+}
+
+.z-gmarker {
+	
+}
+
+.z-gpolyline {
+	
+}
+
+.z-gpolygon {
+	
+}
+
+.z-gscreen {
+	
+}
+
+.z-jasperreport {
+	
+}
+
+.z-timeline {
+	
+}
+
+.z-bandinfo {
+	
+}
+
+.z-hotzone {
+	
+}
+
+.z-timeplot {
+	
+}
+
+.z-plotinfo {
+	
+}
+
+/* Essential Components */
+.z-a {
+	
+}
+
+.z-applet {
+	
+}
+
+.z-button {
+	
+}
+
+/* Todos los botones de catalogo */
+.btnCatalogo{
+	width: 3em;
+	height: 2em;
+	background: #EEEFEF;
+	font-size: 1em;
+	font-weight: bold;
+	font-style: italic;
+	border:1px;
+    color: black;
+}
+
+.z-captcha {
+	
+}
+
+.z-combobutton {
+	
+}
+
+.z-dropupload {
+	
+}
+
+.z-filedownload {
+	
+}
+
+.z-fileupload {
+	
+}
+
+.z-fisheye {
+	
+}
+
+.z-fisheyebar {
+	
+}
+
+.z-html {
+	
+}
+
+.z-iframe {
+	
+}
+
+.z-include {
+	
+}
+
+.z-image {
+	
+}
+
+.z-imagemap {
+	
+}
+
+.z-area {
+	
+}
+
+.z-label {
+	
+}
+
+/* Etiquetas de todo los input de los formularios */
+.etiqueta {
+	font-weight: bold;
+	font-family: arial;
+	font-size: 1em;
+	height: 2em;
+}
+
+/* -------- AYUDA ----------- */
+/* Inicio de de los popup de ayuda de cada textbox */
+.inicioAyuda {
+	font-size: medium;
+	font-weight: bold;
+}
+/* Ejemplo: */
+.etiquetaEjemplo {
+	font-style: italic;
+}
+/* El ejemplo en las ayudas dependiendo de que se necesite */
+.ejemplo {
+	text-decoration: underline;
+}
+
+.z-menu {
+	
+}
+
+.z-menubar {
+	
+}
+
+.z-menuitem {
+	
+}
+
+.z-menupopup {
+	
+}
+
+.z-menuseparator {
+	
+}
+
+.z-nav {
+	
+}
+
+.z-navbar {
+	
+}
+
+.z-navitem {
+	
+}
+
+.z-navseparator {
+	
+}
+
+.z-popup {
+	/* 	background: #a2bedb; */
+}
+
+.z-progressmeter {
+	
+}
+
+.z-selectbox {
+	
+}
+
+.z-separator {
+	
+}
+
+.z-space {
+	
+}
+
+.z-script {
+	
+}
+
+.z-style {
+	
+}
+
+.z-timer {
+	
+}
+
+.z-toolbar {
+	background: #0359b2 repeat-x 0 center;
+	background-image: inherit;
+}
+
+.z-toolbarbutton {
+	
+}
+
+/* Input */
+.z-bandbox {
+	
+}
+
+.z-bandpopup {
+	
+}
+
+.z-calendar {
+	
+}
+
+.z-checkbox {
+	
+}
+
+.z-chosenbox {
+	
+}
+
+.z-ckeditor {
+	
+}
+
+.z-colorbox {
+	
+}
+
+.z-combobox {
+	height: 2em;
+}
+
+.z-comboitem {
+	
+}
+
+.z-datebox {
+	
+}
+
+.z-decimalbox {
+	
+}
+
+.z-doublebox {
+	
+}
+
+.z-doublespinner {
+	
+}
+
+.z-intbox {
+	height: 2em;
+}
+
+.z-longbox {
+	
+}
+
+.z-radio {
+	
+}
+
+.z-radiogroup {
+	
+}
+
+.z-slider {
+	
+}
+
+.z-spinner {
+	
+}
+
+.z-textbox {
+	height: 1.8em;
+}
+
+
+.multiLinea {
+	height: 5em;
+}
+
+.z-timebox {
+	
+}
+
+/* Layouts */
+.z-absolutelayout {
+	
+}
+
+.z-absolutechildren {
+	
+}
+
+.z-anchorlayout {
+	
+}
+
+.z-anchorchildren {
+	
+}
+
+.z-borderlayout {
+	
+}
+
+.z-center {
+	style="background-color:#CAD0D4"
+}
+
+.z-east {
+style="background-color:#CAD0D4"	
+}
+
+.z-north {
+ style="background-color:#CAD0D4";
+}
+
+.z-south {
+	style="background-color:#CAD0D4"
+}
+
+.z-west {
+	
+}
+
+.z-box {
+	
+}
+
+.z-cardlayout {
+	
+}
+
+.z-columnlayout {
+	
+}
+
+.z-columnchildren {
+	
+}
+#cuadronot{ 
+		height:200px; 
+		width:238px; 
+		overflow:hidden; 
+		border:solid 0px #DEDEDE; 
+		padding:6px 10px 14px 10px;
+		background:#fff;
+		} 
+#cuadronot li{ 
+		border:0; margin:0; padding:0; list-style:none; 
+		} 
+#cuadronot li{ 
+		height:60px; 
+		padding:5px; 
+		list-style:none; 
+		} 
+#cuadronot a{ 
+		color:black; 
+		margin-bottom: 
+		} 
+#cuadronot .news-title{ 
+		display:block; 
+		font-weight:bold; 
+		margin-bottom:0px; 
+		font-size:11px; 
+		} 
+#cuadronot .news-text{ 
+		display:block; 
+		font-size:10px;
+		color:black; 
+		line-height: 1.1;
+		} 
+#cuadronot img{ 
+		float:left; 
+		width:50px;
+		height:50px;
+		margin-right:14px; 
+		padding:4px; 
+		border:solid 1px #DEDEDE; 
+		}
+#cuadronot p {
+		font-size: 10px;
+		line-height: 1.1;
+		}
+.context{
+		background-color:#ccc;
+		width:0px;
+		padding: 0px;
+		}
+*{padding:0;margin:0;border:0;}
+#diapos-on{border:10px solid #FBFBFB;-moz-box-shadow:0px 2px 20px #000;-webkit-box-shadow:0px 2px 20px #000;box-shadow:0px 2px 20px #000;width:700px;height:280px;margin:5em auto 0;position:relative;}
+#diapos-on li{position:absolute;top:0;left:0;width:700px;height:350px;list-style:none;}
+#contador{width:700px;margin:1em auto 0;}
+#contador li{float:left;width:10px;height:10px;margin-right:5px;list-style:none;-moz-box-shadow:0 1px 4px #000;-webkit-box-shadow:0 1px 4px #000;box-shadow:0 1px 4px #000;}
+#contador li a{display:block;text-indent:-999em;background:#F9D8E3;width:10px;height:10px;overflow:hidden;}
+#contador li a:focus{outline:1px solid #F9D8E3;}
+#contador li.actual a{background:url(images/banner2.png);}
+.z-hbox {
+	
+}
+
+.z-hlayout {
+	
+}
+
+.z-portallayout {
+	
+}
+
+.z-portalchildren {
+	
+}
+
+.z-splitter {
+	
+}
+
+.z-tablelayout {
+	
+}
+
+.z-tablechildren {
+	
+}
+
+.z-vbox {
+	
+}
+
+.z-vlayout {
+	
+}
+.z-window-embedded{
+style="background-color:#CAD0D4"	
+}
+.z-window-embedded-tl,.z-window-embedded-tr,.z-window-embedded-hl,.z-window-embedded-hr, .z-window-embedded-hm {  
+	background-image:none;      
+	background-color:#CAD0D4;
+}	
+	 

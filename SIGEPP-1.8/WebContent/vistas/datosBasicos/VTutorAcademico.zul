@@ -1,0 +1,282 @@
+<zk>
+	<div class="general" apply="controlador.CTutorAcademico">
+		<groupbox width="45em" mold="3d" title="Tutores Academicos">
+			<tabbox id="taxTutorAcademico" orient="horizontal">
+				<tabs id="tbsTutorAcademico" width="10em">
+					<tab label="Datos Personales" />
+					<tab label="Areas de Conocimiento" />
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+						<grid width="100%">
+							<columns visible="false">
+								<column label="" width="20%" />
+								<column label="" width="60%" />
+								<column label="" width="4%" />
+								<column label="" width="15%" />
+							</columns>
+							<rows>
+								<row>
+									<label class="etiqueta"
+										value="Cedula:" />
+									<hbox hflex="1">
+										<radiogroup
+											id="rdbTipoCedulaTutorAcademico">
+											<radio id="rdoVenezolano"
+												label="V" />
+											<radio id="rdoExtranjero"
+												label="E" />
+										</radiogroup>
+										<textbox
+											id="txtCedulaTutorAcademico" width="26em" />
+									</hbox>
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="cedula"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<button id="btnBuscarTutorAcademico"
+										image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png"
+										class="btnCatalogo" label="" />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Primer Nombre:" />
+									<textbox
+										id="txtNombre1TutorAcademico" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="primerNombre"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Segundo Nombre:" />
+									<textbox
+										id="txtNombre2TutorAcademico" hflex="2" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="segundoNombre"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Primer Apellido:" />
+									<textbox
+										id="txtApellido1TutorAcademico" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="primerApellido"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Segundo Apellido:" />
+									<textbox
+										id="txtApellido2TutorAcademico" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="segundoApellido"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Sexo:" />
+									<radiogroup
+										id="rdbSexoTutorAcademico">
+										<radio
+											id="rdoSexoFTutorAcademico" label="Femenino" />
+										<radio
+											id="rdoSexoMTutorAcademico" label="Masculino" />
+									</radiogroup>
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="sexo"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Residencia:" />
+									<textbox class="multiLinea"
+										id="txtResidenciaTutorAcademico" hflex="1" multiline="true"
+										width="100%" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="residencia"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Correo Electronico:" />
+									<textbox
+										id="txtCorreoTutorAcademico" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="correo"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Telefono1:" />
+									<intbox
+										id="txtTelefono1TutorAcademico" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="telefono1"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Telefono2:" />
+									<intbox
+										id="txtTelefono2TutorAcademico" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="telefono2"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Area Academica:" />
+									<combobox id="cmbAreaAcademica"
+										readonly="true" width="100%">
+										<template name="model">
+											<comboitem
+												label="${each.nombre}" />
+										</template>
+									</combobox>
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="areaAcademica"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<!-- No pude meter la lista en el grid, porque da error -->
+							</rows>
+						</grid>
+					</tabpanel>
+					<tabpanel>
+						<groupbox width="100%" 
+							title="Seleccione las Areas de conocimiento correspondientes al Tutor Academico">
+						<hbox>
+					<listbox id="listaAreasConocimiento" height="160px"
+						emptyMessage="No hay Areas Registrados">
+						<listhead>
+							<listheader label="Nombre" width="100%" />
+						</listhead>
+						<template name="model">
+							<listitem>
+								<listcell label="${each.nombre}"></listcell>
+								<listcell>
+								<spinner inplace="true"	width="98%" />
+								</listcell>
+								<listcell>
+								<spinner inplace="true"	width="98%" value="${each.id}" visible ="false" disabled="true"/>
+								</listcell>
+							</listitem>
+						</template>
+					</listbox>
+					<vbox>
+						<button id="pasar1" label="=&gt;" />
+						<button id="pasar2" label="&lt;=" />
+					</vbox>
+					<listbox id="listaAreasAgregadas" height="160px"
+						emptyMessage="No ha Seleccionado ningun Area">
+						<listhead>
+							<listheader label="Nombre" />
+							<listheader label="Nro. Tutoriados" />
+							<listheader label="id" visible ="false"/>
+						</listhead>
+						<template name="model">
+							<listitem>
+								<listcell label="${each.areaConocimiento.nombre}"></listcell>
+								<listcell>
+								<spinner inplace="true" value="${each.tutoriados}" width="98%" />
+								</listcell>
+								<listcell>
+								<spinner inplace="true" value="${each.areaConocimiento.id}" width="98%"  visible ="false" disabled="true" />
+								</listcell>
+							</listitem>
+						</template>
+					</listbox>
+				</hbox>
+						</groupbox>
+						<div id="botoneraEstandar" />
+						<div id="catalogoTutorAcademico" />
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+		</groupbox>
+	</div>
+	<!-- DETALLES DE LAS AYUDAS -->
+	<popup id="cedula" width="300px">
+		<label class="inicioAyuda" value="Ingrese la cedula de Identidad del Tutor Academico." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="09.987.989" />
+	</popup>
+	<popup id="primerNombre" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el Primer Nombre del Tutor Academico." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Maria" />
+	</popup>
+	<popup id="segundoNombre" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Segundo Nombre." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Jose" />
+	</popup>
+	<popup id="primerApellido" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Primer Apellido." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Perez" />
+	</popup>
+	<popup id="segundoApellido" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Segundo Apellido." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Rojas" />
+	</popup>
+	<popup id="sexo" width="300px">
+		<label class="inicioAyuda" value="Seleccione el Sexo." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Femenino" />
+	</popup>
+	<popup id="residencia" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el lugar de residencia." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo"
+			value="Carrera 28 entre calles 21 y 22, Barquisimeto Edo. Lara" />
+	</popup>
+	<popup id="correo" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el correo del tutor Academico." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="mariaperez@hotmail.com" />
+	</popup>
+	<popup id="telefono1" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el Numero de telefono." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="04XX-XXXXXXX" />
+	</popup>
+	<popup id="telefono2" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el Numero de telefono, si tiene otro." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="02XX-XXXXXXX" />
+	</popup>
+	<popup id="areaAcademica" width="300px">
+		<label class="inicioAyuda"
+			value="Seleccione de la lista el Area Academica." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Produccion" />
+	</popup>
+</zk>

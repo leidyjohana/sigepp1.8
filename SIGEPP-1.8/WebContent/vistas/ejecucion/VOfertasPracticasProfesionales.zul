@@ -1,0 +1,62 @@
+<zk>
+	<groupbox width="100%" title="Ofertas de prácticas profesionales">
+		<grid>
+			<columns />
+			<rows>
+				<row>
+					<label class="etiqueta" value="Descripcion" />
+					<textbox id="txtObservacion" hflex="1"
+						constraint="no empty" multiline="true" width="100%" />
+					<button id="btnBuscar" image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png" 
+						        class="btnCatalogo" label="" />
+				</row>
+				<row>
+					<label class="etiqueta" value="Cantidad:" />
+					<textbox id="txtCantidadCupo" hflex="1"
+						constraint="no empty" />
+				</row>
+				<row>
+					<label class="etiqueta" value="Fecha de Incio" />
+					<datebox id="dtbFechaInicio" cols="8" width="100%" />
+				</row>
+				<row>
+					<label class="etiqueta" value="Fecha Final" />
+					<datebox id="dtbFechaFinal" cols="8" width="100%" />
+				</row>
+				<row>
+					<label class="etiqueta" value="Empresa:" />
+					<combobox id="cmbEmpresa" readonly="true"
+						width="100%">
+						<comboitem label="Makro" />
+						<comboitem label="Polar" />
+						<comboitem label="Drogueria Nena" />
+					</combobox>
+				</row>
+				<row>
+					<label class="etiqueta" value="Area:" />
+					<combobox id="cmbArea" readonly="true"
+						width="100%">
+						<comboitem label="Desarollo" />
+						<comboitem label="Redes" />
+						<comboitem label="Base de Datos" />
+					</combobox>
+				</row>
+				<row>
+					<label class="etiqueta" value="Adjuntar Archivo" />
+					<hbox>
+						<button label="" image="/public/imagenes/iconos/botonesAdicionales/cargarNew.png" 
+						        class="btnCatalogo"
+							upload="true,maxsize=300">
+
+						</button>
+					</hbox>
+				</row>
+			</rows>
+		</grid>
+		<button label="Guardar"></button>
+		<button label="Limpiar"></button>
+		<button label="Eliminar"></button>
+		<button label="Salir"></button>
+		<div id="botoneraEstandar"></div>
+	</groupbox>
+</zk>

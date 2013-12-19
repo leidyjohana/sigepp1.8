@@ -1,0 +1,53 @@
+<zk>
+	<div class="general" apply="controlador.CPasantiaTipo">
+		<groupbox width="45em" mold="3d" title="Tipos de Practica Profesionales">
+			<grid width="100%">
+				<columns visible="false">
+					<column label="" width="20%" />
+					<column label="" width="60%" />
+					<column label="" width="5%" />
+					<column label="" width="15%" />
+				</columns>
+				<rows>
+					<row>
+						<label class="etiqueta" value="Descripcion:" />
+						<textbox id="txtDescripcionTipoPasantia"
+							hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="descripcion"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<button id="btnBuscarTipoPasantia" image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png" 
+						        class="btnCatalogo" label="" />
+					</row>
+					<row>
+						<label class="etiqueta" value="Observacion:" />
+						<textbox class="multiLinea"
+							id="txtObservacionTipoPasantia" hflex="1" multiline="true"
+							width="100%" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="observacion"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+				</rows>
+			</grid>
+			<div id="botoneraEstandar" />
+			<div id="catalogoTipoPasantia" />
+		</groupbox>
+	</div>
+	<!-- 	DETALLES DE LAS AYUDAS    -->
+	<popup id="descripcion" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese la descripcion del tipo de pasantia." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value=" " />
+	</popup>
+	<popup id="observacion" width="300px">
+		<label class="inicioAyuda"
+			value="Si desea agregar cualquier observación" />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="" />
+	</popup>
+</zk>

@@ -1,0 +1,71 @@
+<zk>
+	<!-- <div class="general" apply="controlador.CEstudiante"> -->
+	<window title="Postularse a:" width="45em">
+		<space></space>
+		<grid width="100%">
+			<auxhead>
+				<auxheader label="Datos de la Empresa:" colspan="6" />
+			</auxhead>
+			<columns visible="false">
+				<column label="" width="40%" />
+				<column label="" width="40%" />
+				<column label="" width="20%" />
+			</columns>
+			<rows>
+				<row>
+					<hbox>
+						<label class="etiqueta" value="Empresa:" />
+
+					</hbox>
+					<hbox>
+						<label class="etiqueta" value="Drogueria Nena" />
+					</hbox>
+				</row>
+				<row>
+					<hbox>
+						<label class="etiqueta" value="Area de Desempeno:" />
+					</hbox>
+					<hbox>
+						<label class="etiqueta" value="Desarrollo" />
+					</hbox>
+				</row>
+				<row>
+					<label class="etiqueta" value="Descripción:" />
+					<hbox>
+						<label class="etiqueta" value="Desarrollo de sistema de información." />
+					</hbox>
+				</row>
+			</rows>
+		</grid>
+		<space></space>
+		<grid width="100%">
+			<auxhead>
+				<auxheader label="Datos del Estudiante:" colspan="6" />
+			</auxhead>
+			<columns visible="false">
+				<column label="" width="40%" />
+				<column label="" width="40%" />
+				<column label="" width="20%" />
+			</columns>
+			<rows>
+				<row>
+					<label class="etiqueta" value="Ingrese su cédula:" />
+					<hbox>
+						<radiogroup id="rdgTipoCedulaEstudiante">
+							<radio label="V" value="venezolano" />
+							<radio label="E" value="extranjero" />
+						</radiogroup>
+						<textbox id="txtCedulaEstudiante" hflex="1" />
+					</hbox>
+				</row>
+			</rows>
+		</grid>
+		<space></space>
+		<hbox>
+			<button id="btnAceptar" label="Aceptar" />
+			<button id="btnCancelar" label="Cancelar" />
+		</hbox>
+		<div id="botoneraEstandar"></div>
+	</window>
+	<!-- </div> -->
+</zk>

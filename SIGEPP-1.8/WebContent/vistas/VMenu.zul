@@ -1,0 +1,478 @@
+<zk>
+	<tree class="menu" id="menuGeneral" rows="21">
+		<treechildren>
+			<treeitem open="false">
+				<treerow>
+					<treecell label="Datos basicos" />
+				</treerow>
+				<treechildren>
+					<treeitem>
+						<treerow>
+							<treecell label="Academicos" />
+						</treerow>
+						<treechildren>
+							<treeitem>
+								<treerow>
+									<treecell label="Programas"
+										onClick='contenido.src="../vistas/datosBasicos/VPrograma.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell label="Departamentos"
+										onClick='contenido.src="../vistas/datosBasicos/VDepartamento.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Áreas de Conocimientos"
+										onClick='contenido.src = "../vistas/datosBasicos/VAreaConocimiento.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell label="Estudiantes"
+										onClick='contenido.src = "../vistas/datosBasicos/VEstudiante.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell label="Tutores Academicos"
+										onClick='contenido.src = "../vistas/datosBasicos/VTutorAcademico.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell label="Áreas Academicas"
+										onClick='contenido.src = "../vistas/datosBasicos/VAreaAcademica.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Tipos de Prácticas Profesionales"
+										onClick='contenido.src = "../vistas/datosBasicos/VTipoPasantia.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Fases de la Practica Profesional"
+										onClick='contenido.src = "../vistas/datosBasicos/VActividadLapso.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Criterios a Evaluar en el Seguimiento del Pasante"
+										onClick='contenido.src = "../vistas/datosBasicos/VSeguimientoActividad.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Motivos de Cancelación"
+										onClick='contenido.src = "../vistas/datosBasicos/VMotivo.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell label="Recaudos"
+										onClick='contenido.src = "../vistas/datosBasicos/VRecaudo.zul"' />
+								</treerow>
+							</treeitem>
+						</treechildren>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Empresariales" />
+						</treerow>
+						<treechildren>
+							<treeitem>
+								<treerow>
+									<treecell label="Empresa"
+										onClick='contenido.src = "../vistas/datosBasicos/VEmpresa.zul"' />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Tutores Empresariales"
+										onClick='contenido.src = "../vistas/datosBasicos/VTutorEmpresarial.zul"' />
+								</treerow>
+							</treeitem>
+						</treechildren>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Documentos" />
+						</treerow>
+						<treechildren>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Carta de Presentacion" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Carta de compromiso del tutor academico" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Plantilla para la evaluación del estudiantes" />
+								</treerow>
+							</treeitem>
+						</treechildren>
+					</treeitem>
+				</treechildren>
+			</treeitem>
+			<treeitem open="false">
+				<treerow>
+					<treecell label="Planificación" />
+				</treerow>
+				<treechildren>
+					<treeitem>
+						<treerow>
+							<treecell label="Cronograma de Practicas Profesionales"
+								onClick='contenido.src = "../vistas/planificacion/VCronograma.zul"' />
+						</treerow>
+					</treeitem>
+				</treechildren>
+			</treeitem>
+			<treeitem open="false">
+				<treerow>
+					<treecell label="Ejecucion" />
+				</treerow>
+				<treechildren>
+					<treeitem>
+						<treerow>
+							<treecell
+								label="Ofertas de Practicas Profesionales*"
+								onClick='contenido.src = "../vistas/ejecucion/VOfertasPracticasProfesionales.zul"' />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Prácticas Profesionales*"
+								onClick='contenido.src = "../vistas/ejecucion/VSeleccionPostulados.zul"' />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Plan de trabajo*"
+								onClick='contenido.src = "../vistas/ejecucion/VPlanDeTrabajo.zul"' />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell
+								label="Consignar Recaudos de Practica Profesional"
+								onClick='contenido.src = "../vistas/ejecucion/VConsignarRecaudos.zul"' />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell
+								label="Cancelar Práctica Profesional*"
+								onClick='contenido.src = "../vistas/ejecucion/VCancelarPracticasProfesionales.zul"' />
+						</treerow>
+					</treeitem>
+				
+				</treechildren>
+			</treeitem>
+			<treeitem open="false">
+				<treerow>
+					<treecell
+						label="Control de Practicas Profesionales" />
+				</treerow>
+				<treechildren>
+					<treeitem>
+						<treerow>
+							<treecell
+								label="Pasantia Paso??*"
+								onClick='contenido.src = "../vistas/control/VPasantiaPaso.zul"' />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell
+								label="Plantilla Documento??*"
+								onClick='contenido.src = "../vistas/control/VPlantillaDocumento.zul"' />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Cronograma de Visitas*"
+								onClick='contenido.src = "vistas/control/VCronogramaVisitas.zul"' />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell
+								label="Seguimiento de Plan de Trabajo*"
+								onClick='contenido.src = "vistas/control/VSeguimientoPlanDeTrabajo.zul"' />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Seguimiento del Pasante*"
+								onClick='contenido.src = "vistas/control/VSeguimientoPasante.zul"' />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell
+								label="Evaluacion de Práctica Profesional*"
+								onClick='contenido.src = "vistas/control/VEvaluacionPasante.zul"' />
+						</treerow>
+					</treeitem>
+				</treechildren>
+			</treeitem>
+			<treeitem open="false">
+				<treerow>
+					<treecell label="Reportes" />
+				</treerow>
+				<treechildren>
+					<treeitem open="false">
+						<treerow>
+							<treecell label="Basicos (filtrado)" />
+						</treerow>
+						<treechildren>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Calendario academico de las Practicas profesionales" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Areas de desempeño" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell label="Empresas" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Tutores Academicos" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Tutores Academicos por Departamento" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Tutores Academicos por Area de Desempeño" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Ofertas de Practicas Profesionales" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Solicitudes de practicas profesionales" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell label="Pasantes" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Visitas pautadas por tutores" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell label="Plan de trabajo" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Calendario de plan de trabajo" />
+								</treerow>
+							</treeitem>
+						</treechildren>
+					</treeitem>
+					<treeitem open="false">
+						<treerow>
+							<treecell label="Estadisticos" />
+						</treerow>
+						<treechildren>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Estudiantes aprobados por área de desempeño (Grafico)" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Estudiantes aprobados por lapsos (Grafico)" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Estudiantes aprobados por programa (Grafico)" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Estudiantes aprobados por empresa (Grafico)" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Grafico comparativo de Solicitudes Aprobadas vs Rechazadas" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Grafico comparativo de Estudiantes Aprobados vs Rechazados" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Demanda de prácticas profesionales agrupadas por sexo" />
+								</treerow>
+							</treeitem>
+
+						</treechildren>
+					</treeitem>
+					<treeitem open="false">
+						<treerow>
+							<treecell label="Estrategicos" />
+						</treerow>
+						<treechildren>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Areas de desempeño menos demandadas por las empresas" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Areas de desempeño mas demandadas por las empresas" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Areas de desempeño menos demandadas por los estudiantes" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Areas de desempeño mas demandadas por los estudiantes" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Estudiantes rechazados" />
+								</treerow>
+							</treeitem>
+							<treeitem>
+								<treerow>
+									<treecell
+										label="Empresas por area de desempeño" />
+								</treerow>
+							</treeitem>
+						</treechildren>
+					</treeitem>
+
+				</treechildren>
+			</treeitem>
+
+			<treeitem open="false">
+				<treerow>
+					<treecell label="Administracion del Sistema" />
+				</treerow>
+				<treechildren>
+					<treeitem>
+						<treerow>
+							<treecell label="Seguridad Funcional" />
+						</treerow>
+							<treechildren>
+					<treeitem>
+						<treerow>
+							<treecell label="Registrar Usuarios" onClick='contenido.src = "vistas/datosBasicos/VUsuario.zul"' />
+						</treerow>
+
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Registrar Grupos" 	onClick='contenido.src = "vistas/datosBasicos/VGrupo.zul"' />
+						</treerow>
+
+					</treeitem>
+				</treechildren>
+
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Mantenimiento de Datos" />
+						</treerow>
+
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Ayuda" />
+						</treerow>
+					</treeitem>
+				</treechildren>
+			</treeitem>
+			<treeitem open="false">
+				<treerow>
+					<treecell label="Configurar Portal Web" />
+				</treerow>
+				<treechildren>
+					<treeitem>
+						<treerow>
+							<treecell label="Registrar Noticias" />
+						</treerow>
+
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell label="Configurar Ayuda" />
+						</treerow>
+					</treeitem>
+					<treeitem>
+						<treerow>
+							<treecell
+								label="Registrar Enlaces de Interes" />
+						</treerow>
+					</treeitem>
+				</treechildren>
+			</treeitem>
+		</treechildren>
+	</tree>
+</zk>

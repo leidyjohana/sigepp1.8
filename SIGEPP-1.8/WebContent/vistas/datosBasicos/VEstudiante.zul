@@ -1,0 +1,374 @@
+<zk>
+	<div class="general" apply="controlador.CEstudiante">
+		<groupbox width="55em" mold="3d" title="Estudiantes">
+			<tabbox id="taxEstudiante" orient="horizontal">
+				<tabs id="tbsEstudiante" width="10em">
+					<tab label="Datos Personales" />
+					<tab label="Datos Academicos" />
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+						<grid width="100%">
+							<columns visible="false">
+								<column label="" width="20%" />
+								<column label="" width="60%" />
+								<column label="" width="4%" />
+								<column label="" width="15%" />
+							</columns>
+							<rows>
+								<row>
+									<label class="etiqueta"
+										value="Cedula:" />
+									<hbox hflex="1">
+										<radiogroup
+											id="rdgTipoCedulaEstudiante">
+											<radio label="V"
+												value="venezolano" id="rdoVenezolano" />
+											<radio label="E"
+												value="extranjero" id="rdoExtranjero" />
+										</radiogroup>
+										<textbox
+											id="txtCedulaEstudiante" width="26em" />
+									</hbox>
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="cedula"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<button id="btnBuscar"
+										image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png"
+										class="btnCatalogo" />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Primer Nombre:" />
+									<textbox id="txtNombre1Estudiante"
+										hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="primerNombre"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Segundo Nombre:" />
+									<textbox id="txtNombre2Estudiante"
+										hflex="2" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="segundoNombre"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Primer Apellido:" />
+									<textbox id="txtApellido1Estudiante"
+										hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="primerApellido"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Segundo Apellido:" />
+									<textbox id="txtApellido2Estudiante"
+										hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="segundoApellido"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Sexo:" />
+									<radiogroup
+										id="rdgSexoEstudiante">
+										<radio label="Femenino"
+											value="femenino" id="rdoSexoFemeninoEstudiante" />
+										<radio label="Masculino"
+											value="Masculino" id="rdoSexoMasculinoEstudiante" />
+									</radiogroup>
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="sexo"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Estado Civil:" />
+									<combobox
+										id="cmbEstadoCivilEstudiante" readonly="true" width="100%">
+										<comboitem label="Casado" />
+										<comboitem label="Soltero" />
+										<comboitem label="Viudo" />
+									</combobox>
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="estadoCivil"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Fecha de Nacimiento:" />
+									<datebox
+										id="dtbFechaNacimientoEstudiante" cols="8" width="100%" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="fechaNacimiento"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Residencia:" />
+									<textbox
+										id="txtResidenciaEstudiante" hflex="1" multiline="true"
+										width="100%" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="residencia"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Correo:" />
+									<textbox id="txtCorreo" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="correo"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Telefono movil:" />
+									<intbox
+										id="txtTelefonoMovilEstudiante" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="telefonoMovil"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Telefono Local:" />
+									<intbox
+										id="txtTelefonoLocalEstudiante" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="telefonoLocal"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<!--  
+									<row> <label class="etiqueta" value="Foto:" />
+									<panel>
+									<panelchildren>
+									<fileupload id="fotoEstudiante" label="Cargar Imagen">
+									</fileupload>
+									</panelchildren>
+									</panel>
+									<vbox>
+									Foto:
+									<image id="imagen" />
+									</vbox>
+									</row>
+								-->
+							</rows>
+						</grid>
+					</tabpanel>
+					<tabpanel>
+						<grid width="100%">
+							<columns visible="false">
+								<column label="" width="20%" />
+								<column label="" width="60%" />
+								<column label="" width="4%" />
+								<column label="" width="15%" />
+							</columns>
+							<rows>
+								<row>
+									<label class="etiqueta"
+										value="Programa:" />
+									<combobox id="cmbPrograma"
+										readonly="true" width="100%">
+										<template name="model">
+											<comboitem
+												label="${each.nombre}" />
+										</template>
+									</combobox>
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="programa"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Promedio:" />
+									<textbox id="txtPromedio" hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="promedio"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Semestre:" />
+									<combobox id="cmbSemestre"
+										readonly="true" width="100%">
+										<comboitem label="1" />
+										<comboitem label="2" />
+										<comboitem label="3" />
+										<comboitem label="4" />
+										<comboitem label="5" />
+										<comboitem label="6" />
+										<comboitem label="7" />
+										<comboitem label="8" />
+										<comboitem label="9" />
+										<comboitem label="10" />
+									</combobox>
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="semestre"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Creditos Aprobados:" />
+									<intbox id="txtCreditosAprobados"
+										hflex="1" width="100px" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="creditosAprobados"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Servicio Comunitario:" />
+									<radiogroup
+										id="rdgServicioComunitario">
+										<radio label="Aprobado"
+											id="rdoAprobado" />
+										<radio label="No aprobado"
+											id="rdoNoAprobado" />
+									</radiogroup>
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help"
+										tooltip="servicioComunitario"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+							</rows>
+						</grid>
+						<div id="botoneraEstandar" />
+						<div id="catalogoEstudiante" />
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+		</groupbox>
+	</div>
+	<!-- 	DETALLES DE LAS AYUDAS    -->
+	<popup id="primerNombre" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el Primer Nombre del estudiante." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Maria" />
+	</popup>
+	<popup id="segundoNombre" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Segundo Nombre." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Jose" />
+	</popup>
+	<popup id="primerApellido" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Primer Apellido." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Perez" />
+	</popup>
+	<popup id="segundoApellido" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Segundo Apellido." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Rojas" />
+	</popup>
+	<popup id="sexo" width="300px">
+		<label class="inicioAyuda" value="Seleccione el Sexo." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Femenino" />
+	</popup>
+	<popup id="estadoCivil" width="300px">
+		<label class="inicioAyuda" value="Seleccione el estado civil." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Soltero" />
+	</popup>
+	<popup id="fechaNacimiento" width="300px">
+		<label class="inicioAyuda"
+			value="Seleccione la fecha de Nacimiento, usando el calendario." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="12-jul-1995" />
+	</popup>
+	<popup id="residencia" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el lugar de residencia." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo"
+			value="Carrera 28 entre calles 21 y 22, Barquisimeto Edo. Lara" />
+	</popup>
+	<popup id="correo" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el correo del estudiante." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="mariaperez@hotmail.com" />
+	</popup>
+	<popup id="telefonoMovil" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el Numero de telefono Movil." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="04XX-XXXXXXX" />
+	</popup>
+	<popup id="telefonoLocal" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el Numero de telefono Local." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="02XX-XXXXXXX" />
+	</popup>
+	<popup id="programa" width="300px">
+		<label class="inicioAyuda"
+			value="Seleccione de la lista el Programa." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Produccion" />
+	</popup>
+	<popup id="promedio" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el promedio del estudiante." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="16.04" />
+	</popup>
+	<popup id="semestre" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese que esta cursando el estudiante." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="5to" />
+	</popup>
+	<popup id="creditosAprobados" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese las unidades de creditos aprobadas por el estudiante." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="70" />
+	</popup>
+	<popup id="servicioComunitario" width="300px">
+		<label class="inicioAyuda"
+			value="Seleccione si el estudiante tiene aprobado o no el Servicio comunitario." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Aprobado" />
+	</popup>
+</zk>

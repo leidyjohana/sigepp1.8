@@ -1,0 +1,63 @@
+<zk>
+	<div class="general" apply="controlador.CRecaudo">
+		<groupbox width="45em" mold="3d" title="Recaudos">
+			<grid width="100%">
+				<columns visible="false">
+					<column label="" width="20%" />
+					<column label="" width="60%" />
+					<column label="" width="5%" />
+					<column label="" width="15%" />
+				</columns>
+				<rows>
+					<row>
+						<label class="etiqueta" value="Nombre:" />
+						<textbox id="txtDescripcionRecaudo" hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="descripcion"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<button id="btnBuscarRecaudo" label="Buscar" />
+					</row>
+					<row>
+						<label class="etiqueta" value="Plantilla:" />
+						<combobox id="cmbPlantilla" readonly="true"
+							width="100%">
+							<template name="model">
+								<comboitem label="${each.descripcion}" />
+							</template>
+						</combobox>
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="plantilla"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+				</rows>
+			</grid>
+			<div id="botoneraEstandar"></div>
+			<listbox id="listaRecaudo" height="160px"
+				emptyMessage="No hay recaudos registrados">
+				<listhead>
+					<listheader label="Nombre" />
+				</listhead>
+				<template name="model">
+					<listitem>
+						<listcell label="${each.descripcion}"></listcell>
+					</listitem>
+				</template>
+			</listbox>
+		</groupbox>
+	</div>
+	<!-- 	DETALLES DE LAS AYUDAS    -->
+	<popup id="descripcion" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el nombre del recaudo." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Documentos" />
+	</popup>
+	<popup id="plantilla" width="300px">
+		<label class="inicioAyuda" value="Seleccione la plantilla." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Informatica" />
+	</popup>
+</zk>

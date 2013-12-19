@@ -1,0 +1,104 @@
+<zk>
+	<!-- <div class="general" apply="controlador.CLapsoActividad"> -->
+	<groupbox width="45em" mold="3d"
+		title="Cronograma de Pasantias Profesionales">
+		<tabbox id="tabCronograma">
+			<tabs id="tabs">
+				<tab label="Lapso Academico" />
+				<tab label="Cronograma" />
+			</tabs>
+			<tabpanels>
+				<tabpanel>
+					<grid width="100%">
+						<columns visible="false">
+								<column label="" width="20%" />
+								<column label="" width="60%" />
+								<column label="" width="4%" />
+								<column label="" width="15%" />
+							</columns>
+						<rows>
+							<row>
+								<label class="etiqueta" value="Programa:" />
+								<combobox id="cmbPrograma" hflex="1" />
+							</row>
+							<row>
+								<label class="etiqueta" value="Nombre:" />
+								<textbox id="txtNombrePasantiaLapso" hflex="1" />
+							</row>
+							<row>
+								<label class="etiqueta" value="Descripcion:" />
+								<textbox id="txtDescripcionLapsoActividad" constraint="no empty"
+									multiline="true" width="100%" />
+							</row>
+							<row>
+								<label class="etiqueta" value="Fecha inicio:" />
+								<hbox align="center">
+									<datebox id="dtbFechaInicio" value="@bind(fx.Fecha inicio)"
+										format="@load(vm.dateFormat)" width="100%" tabindex="7" />
+								</hbox>
+							</row>
+							<row>
+								<label class="etiqueta" value="Fecha fin:" />
+								<hbox align="center">
+									<datebox id="dtbFechaFin" value="@bind(fx.Fecha inicio)"
+										format="@load(vm.dateFormat)" width="100%" tabindex="7" />
+								</hbox>
+							</row>
+						</rows>
+					</grid>
+				</tabpanel>
+				<tabpanel>
+					<groupbox width="100%"
+						title="Seleccione las Actividades Correspondientes al lapso Academico ">
+						<hbox>
+							<listbox id="listaActidades" height="160px"
+								emptyMessage="No hay Actividades Registradas">
+								<listhead>
+									<listheader label="Actividades" />
+								</listhead>
+								<template name="model">
+									<listitem>
+										<listcell label="${each.Actividades}"></listcell>
+										<listcell>
+											<div class='text-center'>
+												<spinner inplace="true" width="98%" />
+											</div>
+										</listcell>
+									</listitem>
+								</template>
+							</listbox>
+							<vbox>
+								<button id="pasar1" label="=&gt;" />
+								<button id="pasar2" label="&lt;=" />
+							</vbox>
+							<listbox id="listaActividadesAgregadas" height="160px"
+								emptyMessage="No ha Seleccionado ninguna Actividad">
+								<listhead>
+									<listheader label="Actividad" />
+									<listheader label="Fecha Inicio" />
+									<listheader label="Fecha Fin" />
+								</listhead>
+								<template name="model">
+									<listitem>
+										<listcell label="${each.Actividad}"></listcell>
+										<listcell>
+											<div class='text-center'>
+												<datebox id="dtbFechaInicio" value="${each.FechaInicio}"
+													format="@load(vm.dateFormat)" width="100%" tabindex="7" />
+												<datebox id="dtbFechaFin" value="${each.FechaFin}"
+													format="@load(vm.dateFormat)" width="100%" tabindex="7" />
+											</div>
+										</listcell>
+									</listitem>
+								</template>
+							</listbox>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+		<!-- Para poder ver la botonera agregar la botonera en el controlador -->
+		<div id="botoneraEstandar"></div>
+		<div id="catalogoPasantiaLapso" />
+	</groupbox>
+</zk>

@@ -1,0 +1,337 @@
+<!--  Autor: Robert Albarado -->
+<!--  Revisado por: Michell Lobo -->
+<!--  Version: 1.0 -->
+<!--  Fecha Creacion: 07/12/2013 -->
+<!-- ______________________________ -->
+<!--  HISTORIAL DE MODIFICACIONES -->
+<!-- ______________________________ -->
+<!--  + Michell Lobo 08/12/2013  -->
+<!--  Descripcion: Estandarizarlo -->
+<!--  Revisado por: Michell Lobo -->
+<!--  ______________________________ -->
+<!--  + Robert Alvarado 08/12/2013  -->
+<!--  Descripcion: Carruzel de imagenes, redistrubucion y ordenar en el css los estilos  -->
+<!--  Revisado por: Michell Lobo -->
+<!--  ______________________________ -->
+
+<?page title="Bienvenido" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<?meta name="viewport" content="width=device-width, initial-scale=1.0" ?>
+	<style src="public/css/Estilo.css" />
+	<html>
+		<script type="text/javascript" defer="true">
+			$(document).ready(function(){ var first = 0; var speed =
+			700; var pause = 3500; function removeFirst(){ first =
+			$('ul#cuadronot li:first').html(); $('ul#cuadronot
+			li:first') .animate({opacity: 0}, speed) .fadeOut('slow',
+			function() {$(this).remove();}); addLast(first); } function
+			addLast(first){ last = '
+			<li style="display:none">'+first+'</li>
+			'; $('ul#cuadronot').append(last) $('ul#cuadronot li:last')
+			.animate({opacity: 1}, speed) .fadeIn('slow') } interval =
+			setInterval(removeFirst, pause); });
+		</script>
+		<script type="text/javascript" src="js/DP.js"></script>
+		<script type="text/javascript" defer="true">
+			window.onload = DP.inicio;
+		</script>
+	</html>
+	<borderlayout sclass="principal" height="100%" width="100%">
+		<north height="20%">
+			<borderlayout>
+				<!-- Inicio del Encabezado-->
+				<north sclass="header" flex="true" height="6em">
+					<hbox hflex="1">
+						<image src="public/imagenes/bannerSIGEPP.gif"
+							height="6em" width="70em" />
+						<image
+							src="public/imagenes/extencionDelBanner.gif" height="6em"
+							width="300em" />
+					</hbox>
+				</north>
+				<!-- Fin del encabezado-->
+				<!-- Inicio del Menu-->
+				<south size="20%" border="0" flex="true"
+					collapsible="false">
+					<include src="vistas/Banner.zul"></include>
+				</south>
+				<!--Fin del Menu-->
+			</borderlayout>
+		</north>
+		<center border="0" sclass="body">
+			<borderlayout
+				style="margin-top:10px; margin-right:5px; margin-left:5px;">
+				<center border="0">
+					<borderlayout>
+						<north sclass="body" border="0" size="70%">
+							<html>
+								<ul id="diapos"
+									style="margin-top:7px;">
+									<li>
+										<img
+											src="public/imagenes/divinaPastora.jpg" alt="" width="700"
+											height="280" />
+									</li>
+									<li>
+										<img
+											src="public/imagenes/rectorado.jpg" alt="" width="700"
+											height="280" />
+									</li>
+									<li>
+										<img
+											src="public/imagenes/auditorio.jpg" alt="" width="700"
+											height="280" />
+									</li>
+								</ul>
+							</html>
+						</north>
+						<south sclass="body" border="0" size="30%">
+							<div
+								style="margin-right:8px; margin-left:8px;">
+								<hlayout>
+									<panel
+										title="Informacion de Pasantias" border="normal"
+										height="150px;" hflex="1">
+										<panelchildren>
+											<vlayout>
+												<space />
+												<label
+													value=" -Consultar requisitos para realizar Practicas Profesionales."
+													style="cursor:pointer" />
+											</vlayout>
+										</panelchildren>
+									</panel>
+									<panel title="Noticias"
+										border="normal" height="150px;" hflex="1">
+										<panelchildren>
+											<vlayout>
+												<space />
+												<label value=""
+													style="cursor:pointer" />
+												<space />
+											</vlayout>
+										</panelchildren>
+									</panel>
+									<panel title="Enlaces de Interes"
+										border="normal" height="150px;" hflex="1">
+										<panelchildren>
+											<vlayout>
+												<space />
+												<vlayout>
+													<grid>
+														<columns>
+															<column />
+															<column />
+															<column />
+														</columns>
+														<rows>
+															<row>
+																<image
+																	src="/public/imagenes/enlaces/logoSIGAREP.png"
+																	width="70%" height="50%"
+																	style="margin-left:10px; cursor:pointer" />
+																<image
+																	src="/public/imagenes/enlaces/logoIterator.png"
+																	width="70%" height="50%"
+																	style="margin-left:10px; cursor:pointer" />
+																<image
+																	src="/public/imagenes/enlaces/LogoSIAGSCE.jpg"
+																	width="70%" height="50%"
+																	style="margin-left:10px; cursor:pointer" />
+															</row>
+															<row>
+																<label
+																	value="Equipo 1 "
+																	style="font-size:12px; margin-left:10px;" />
+																<label
+																	value="Equipo 2 "
+																	style="font-size:12px; margin-left:10px;" />
+																<label
+																	value="Equipo 4 "
+																	style="font-size:12px; margin-left:10px;" />
+															</row>
+														</rows>
+													</grid>
+												</vlayout>
+												<space />
+											</vlayout>
+										</panelchildren>
+									</panel>
+								</hlayout>
+							</div>
+						</south>
+					</borderlayout>
+				</center>
+				<east title="" sclass="body_left" size="25%"
+					flex="true">
+					<vlayout style="overflow:auto;">
+						<!-- Inicio de login -->
+						<window title="Iniciar Sesion" border="normal"
+							width="100%">
+							<vlayout>
+								<hlayout width="100%">
+									<textbox sclass="input-mini"
+										placeholder="Usuario" id="log_usuario" hflex="1" />
+									<textbox sclass="input-mini"
+										placeholder="Clave" id="log_clave" hflex="1" type="password" />
+									<button
+										sclass="btn btn-small btn-primary" label="Entrar"
+										href="vistas/Principal.zul">
+									</button>
+								</hlayout>
+							</vlayout>
+						</window>
+						<!-- Fin del login -->
+						<window border="0" width="100%" vflex="1"
+							style="background-color:#CAD0D4" contentStyle="overflow:auto;">
+							<tabbox id="tb" width="100%" height="100%"
+								mold="accordion">
+								<tabs>
+									<tab
+										label="Cronograma de actividades" />
+									<tab label="Reglamentos" />
+									<tab label="Twitter" />
+								</tabs>
+								<tabpanels>
+									<tabpanel>
+										<grid width="100%" vflex="1"
+											height="180px">
+											<columns>
+												<column width="40%">
+													Fecha
+												</column>
+												<column width="60%">
+													Actividades
+												</column>
+											</columns>
+											<rows sclass="narrow">
+												<row>
+													<label
+														value="02/11/2013" />
+													<label
+														tooltip="Desc" value="Inscripcion de Estudiantes" />
+												</row>
+												<row>
+													<label
+														value="02/02/2014" />
+													<label
+														tooltip="Desc"
+														value="Finalizacion de periodo de entrega de Informe final del peridodo 2013-2014" />
+													<popup id="Desc"
+														width="200px">
+													</popup>
+												</row>
+											</rows>
+										</grid>
+									</tabpanel>
+									<tabpanel>
+										<grid width="100%" vflex="1"
+											height="180px">
+											<rows sclass="narrow">
+												<row>
+													<button
+														style="cursor:pointer"
+														label="Reglamento Practica Profesional">
+														<attribute name="onClick"><![CDATA[
+	Filedownload.save("/public/Reglamento Pasantias.docx", null);
+]]></attribute>
+													</button>
+												</row>
+											</rows>
+										</grid>
+									</tabpanel>
+									<tabpanel>
+										<include
+											src="/public/twitter.html" />
+									</tabpanel>
+									<tabpanel>
+										<hbox>
+											<calendar id="cal"
+												onChange="in.value = cal.value" />
+										</hbox>
+									</tabpanel>
+								</tabpanels>
+							</tabbox>
+						</window>
+						<!-- Fin del Twitter -->
+					</vlayout>
+				</east>
+				<west sclass="body" flex="true" size="20%">
+					<vlayout>
+						<window
+							title="Consultar Estudiantes aprobados para realizar Practicas Profesionales: "
+							border="normal" width="100%">
+							<vlayout>
+								<hlayout width="100%">
+									<label value="Cedula: "
+										style="font-size:12px;" />
+									<textbox id="log_usuario" hflex="1" />
+									<button label="Consultar"></button>
+								</hlayout>
+							</vlayout>
+						</window>
+						<window title="Ofertas" border="normal"
+							width="100%" style="background-color:#CAD0D4">
+							<vlayout>
+								<html>
+									<div class="context">
+										<ul id="cuadronot">
+											<li>
+												<image
+													src="public/imagenes/enlaces/logodrogeriaNena.jpg" />
+												<a class="news-title"
+													href="#">
+													Drogeria Nena
+												</a>
+												<span
+													class="news-text">
+													<label
+														class="news-text" />
+													3 cupos-Area
+													Programacion
+												</span>
+											</li>
+											<li>
+												<image alt=""
+													src="public/imagenes/enlaces/P_and_G-logo.gif" />
+												<a class="news-title"
+													href=" # ">
+													Procter and Gamble
+												</a>
+												<span
+													class="news-text">
+													4 cupos-Area Redes
+												</span>
+											</li>
+											<li>
+												<image alt=""
+													src="public/imagenes/enlaces/empresasPolar.jpg" />
+												<a class="news-title"
+													href=" # ">
+													Empresas Polar-Area
+													Sistemas
+												</a>
+												<span
+													class="news-text">
+													2 cupos-Area Redes
+												</span>
+											</li>
+										</ul>
+									</div>
+								</html>
+							</vlayout>
+						</window>
+					</vlayout>
+				</west>
+				<south vflex="1" flex="true"
+					style="background:url('images/banner2.png');">
+					<div sclass="footer">
+						<label style="padding-left:35%;"
+							value="© 2013 Elaborado por SIGEPP- All Rights Reserved. Terms Privacy">
+						</label>
+					</div>
+				</south>
+			</borderlayout>
+		</center>
+	</borderlayout>
+</zk>

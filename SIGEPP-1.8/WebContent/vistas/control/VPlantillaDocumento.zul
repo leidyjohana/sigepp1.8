@@ -1,0 +1,53 @@
+<zk>
+	<div class="general" apply="controlador.CPlantillaDocumento">
+		<groupbox width="45em">
+			<grid width="100%">
+				<auxhead>
+					<auxheader label="Plantilla Documento"
+                        colspan="6" image="..src/imagenes/registo.png" />
+				</auxhead>
+				<columns />
+				<rows>
+					<row>
+						<label class="etiqueta" value="Descripcion:" />
+						<textbox id="txtDescripcionPlantilla" hflex="1" />
+							<button id="btnBuscarPlantilla" image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png" 
+						        class="btnCatalogo" label="" />
+					</row>
+					
+					<row>
+						<label class="etiqueta" value="Estado Vigencia:" />
+						<combobox id="cmbEstadoVigencia" readonly="true" width="100%">
+							<comboitem label="ACTIVO" description="ACTIVO" />
+							<comboitem label="INACTIVO" description="INACTIVO" />
+						</combobox>
+					</row>
+					
+					<row>
+						<label class="etiqueta" value="Version:" />
+						<textbox id="txtVersion" hflex="1" />
+					</row>
+					
+					
+				</rows>
+			</grid>
+			<div id="botoneraEstandar"></div>
+	
+		<listbox id="listaPlantilla" height="160px" emptyMessage="No hay plantillas registradas">
+		
+		<listhead>
+			<listheader label="Descripcion" />
+			<listheader label="Estado Vigencia" />
+			<listheader label="Version" />
+		</listhead>
+		<template  name="model">
+			<listitem>
+				<listcell label="${each.descripcion}"></listcell>
+				<listcell label="${each.estadoVigencia}"></listcell>
+				<listcell label="${each.version}"></listcell>
+			</listitem>
+		</template>
+		</listbox>
+		</groupbox>
+	</div>
+</zk>

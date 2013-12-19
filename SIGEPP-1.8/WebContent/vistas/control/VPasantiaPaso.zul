@@ -1,0 +1,40 @@
+<zk>
+	<div class="general" apply="controlador.CPasantiaPaso">
+		<groupbox width="45em">
+			<grid width="100%">
+				<auxhead>
+					<auxheader label="Pasantia Paso" colspan="6" />
+				</auxhead>
+				<columns />
+				<rows>
+				
+					<row>
+						<label class="etiqueta" value="Descripcion:" />
+						<textbox id="txtDescripcionPasantiaPaso" hflex="1"
+						    multiline="true" width="100%" />
+						    <button id="btnBuscarPasantiaPaso" image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png" 
+						        class="btnCatalogo" label="" />
+					</row>
+						
+				</rows>
+			</grid>
+			<div id="botoneraEstandar"></div>
+			<div id="catalogoPasantiaPaso">
+			
+			<listbox id="listaPasantiaPaso" height="160px" emptyMessage="No hay Pasos registrados">
+		
+		<listhead>
+			<listheader label="Descripcion" />		
+		</listhead>
+		<template  name="model">
+			<listitem >
+				<listcell label="${each.descripcion}"></listcell>
+			</listitem>
+		</template>
+	</listbox>
+	
+			
+			</div>
+		</groupbox>
+	</div>
+</zk>

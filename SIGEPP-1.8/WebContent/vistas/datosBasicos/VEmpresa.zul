@@ -1,0 +1,159 @@
+<zk>
+	<div class="general" apply="controlador.CEmpresa">
+		<groupbox width="45em" mold="3d" title="Empresa">
+			<grid width="100%">
+				<columns visible="false">
+					<column label="" width="20%" />
+					<column label="" width="60%" />
+					<column label="" width="4%" />
+					<column label="" width="15%" />
+				</columns>
+				<rows>
+					<row>
+						<label class="etiqueta" value="RIF:" />
+						<textbox id="txtRifEmpresa" hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="rif"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<button id="btnBuscarEmpresa"
+							image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png"
+							class="btnCatalogo" />
+					</row>
+					<row>
+						<label class="etiqueta" value="Nombre:" />
+						<textbox id="txtNombreEmpresa" hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="nombre"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Direccion 1:" />
+						<textbox id="txtDireccion1Empresa" hflex="1"
+							multiline="true" width="100%" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="direccion1"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Direccion 2:" />
+						<textbox id="txtDireccion2Empresa" hflex="1"
+							multiline="true" width="100%" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="direccion2"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Telefono Local:" />
+						<intbox id="txtTelefonolocalEmpresa" hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="telefono1"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Telefono Movil:" />
+						<intbox id="txtTelefonoMovilEmpresa" hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="telefono2"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Correo 1:" />
+						<textbox id="txtCorreo1Empresa" hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="correo1"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Correo 2:" />
+						<textbox id="txtCorreo2Empresa" hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="correo2"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta"
+							value="Nombre Persona de Contacto:" />
+						<textbox id="txtNombreContacto" hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="personaContacto"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+				</rows>
+			</grid>
+			<div id="botoneraEstandar" />
+			<div id="catalogoEmpresa" />
+		</groupbox>
+	</div>
+	<!-- DETALLES DE LAS AYUDAS -->
+	<popup id="rif" width="300px">
+		<label class="inicioAyuda" value="Ingrese el RIF de la Empresa" />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="J-101929292-2" />
+	</popup>
+	<popup id="nombre" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el Nombre de la empresa." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="La Buena c.a." />
+	</popup>
+	<popup id="direccion1" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese la direccion de la Empresa." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Av.27 entre 60 y 61" />
+	</popup>
+	<popup id="direccion2" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese de tener otra dirección." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo"
+			value="Av. 25 con calles 13 y 14 Edif. Don Pedro" />
+	</popup>
+	<popup id="telefono1" width="300px">
+		<label class="inicioAyuda"
+			value="Ingresa el Telefono Local de la Empresa." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="0255-XXXXXXX" />
+	</popup>
+	<popup id="telefono2" width="300px">
+		<label class="inicioAyuda"
+			value="Ingresa el Telefono Movil de la Empresa" />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="04XX-XXXXXXX" />
+	</popup>
+	<popup id="correo1" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el correo de la empresa." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="labuenaca@hotmail.com" />
+	</popup>
+	<popup id="correo2" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el correo de la empresa alternativo." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="labuena1@gmail.com" />
+	</popup>
+	<popup id="personaContacto" width="300px">
+		<label class="inicioAyuda"
+			value="Ingresa el nombre de una persona de contacto." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Carlos Mendez" />
+	</popup>
+</zk>

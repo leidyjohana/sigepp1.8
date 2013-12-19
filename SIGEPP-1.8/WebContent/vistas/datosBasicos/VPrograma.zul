@@ -1,0 +1,179 @@
+<zk>
+	<div class="general" apply="controlador.CPrograma">
+		<groupbox width="45em" mold="3d" title="Programas"
+			class="grupos">
+			<tabbox id="taxPrograma" orient="horizontal">
+				<tabs id="tbsPrograma" width="10em">
+					<tab label="Datos del Programa" />
+					<tab label="Departamentos" />
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+						<grid width="100%">
+							<columns visible="false">
+								<column label="" width="20%" />
+								<column label="" width="60%" />
+								<column label="" width="5%" />
+								<column label="" width="15%" />
+							</columns>
+							<rows>
+								<row>
+									<label class="etiqueta"
+										value="Nombre:" />
+									<textbox id="txtNombrePrograma"
+										hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" style="cursor: help" tooltip="nombre"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<button id="btnBuscarPrograma"
+										image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png"
+										class="btnCatalogo" />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Descripcion:" />
+									<textbox class="multiLinea"
+										id="txtDescripcionPrograma" hflex="1" multiline="true"
+										width="100%" />
+									<image class="imgAyuda" width="100%"
+										height="100%" tooltip="descripcion" style="cursor: help"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Telefono:" />
+									<intbox id="txtTelefonoPrograma"
+										hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" tooltip="telefono" style="cursor: help"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Permite varias pasantias:" />
+									<radiogroup
+										id="rdbPasantiasPrograma">
+										<radio label="Si" value="si"
+											id="rdbVariasPasantiasSi" />
+										<radio label="No" value="no"
+											id="rdbVariasPasantiasNo" />
+									</radiogroup>
+									<image class="imgAyuda" width="100%"
+										height="100%" tooltip="variasPasantias" style="cursor: help"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+								<row>
+									<label class="etiqueta"
+										value="Tutoriados permitidos" />
+									<textbox id="txtTutoriadosPrograma"
+										hflex="1" />
+									<image class="imgAyuda" width="100%"
+										height="100%" tooltip="tutoriados" style="cursor: help"
+										src="/public/imagenes/iconos/signoInterrogacion.png" />
+									<hbox />
+								</row>
+							</rows>
+						</grid>
+					</tabpanel>
+					<tabpanel>
+						<groupbox width="100%"
+							title="Seleccione los Depatamentos Correspondientes al Programa">
+							<hbox>
+								<listbox id="listaDepartamento"
+									height="160px"
+									emptyMessage="No hay Departamentos registrados">
+									<listhead>
+										<listheader label="Nombre" />
+										<listheader label="Descripcion" />
+									</listhead>
+									<template name="model">
+										<listitem>
+											<listcell
+												label="${each.nombre}">
+											</listcell>
+											<listcell
+												label="${each.descripcion}">
+											</listcell>
+											<listcell>
+												<div
+													class='text-center'>
+													<spinner
+														inplace="true" width="98%" />
+												</div>
+											</listcell>
+										</listitem>
+									</template>
+								</listbox>
+								<vbox>
+									<button id="pasar1" label="=&gt;" />
+									<button id="pasar2" label="&lt;=" />
+								</vbox>
+								<listbox
+									id="listaDepartamentosAgregados" height="160px"
+									emptyMessage="No ha Seleccionado ningun Departamento">
+									<listhead>
+										<listheader label="Nombre" />
+										<listheader label="Descripcion" />
+									</listhead>
+									<template name="model">
+										<listitem>
+											<listcell
+												label="${each.nombre}">
+											</listcell>
+											<listcell
+												label="${each.descripcion}">
+											</listcell>
+										</listitem>
+									</template>
+								</listbox>
+							</hbox>
+						</groupbox>
+						<div id="botoneraEstandar" />
+						<div id="catalogoPrograma" />
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+		</groupbox>
+	</div>
+
+	<!-- DETALLES DE LAS AYUDAS -->
+	<popup id="nombre" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el nombre del Programa." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Producción" />
+	</popup>
+	<popup id="descripcion" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese la descripcion del Programa." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo"
+			value="Programa abierto en el año 2008 para la carrera de Ingeniería de Producción" />
+	</popup>
+	<popup id="telefono" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el numero de telefono." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="04XX-XXXXXXX" />
+	</popup>
+	<popup id="variasPasantias" width="300px">
+		<label class="inicioAyuda" value="Marque una opcion." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Opcion Si o No" />
+	</popup>
+	<popup id="tutoriados" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el numero de Tutoriados permitidos" />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value=": 2" />
+	</popup>
+
+</zk>

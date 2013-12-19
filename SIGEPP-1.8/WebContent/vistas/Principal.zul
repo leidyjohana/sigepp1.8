@@ -1,0 +1,67 @@
+<!--  Autor: Robert Alvarado -->
+<!--  Revisado por: Michell Lobo -->
+<!--  Version: 1.0 -->
+<!--  Fecha Creacion: 07/12/2013 -->
+ 
+<!--  HISTORIAL DE MODIFICACIONES -->
+
+<!--  + Michell Lobo 08/12/2013 -->
+
+<?page id="mainPage" title="SIGEPP" contentType="text/html;charset=UTF-8"?>
+
+<zk>
+	<style src="../public/css/Estilo.css" />
+	<style>
+		.principal{ position:relative; min-width:1200px;
+		min-height:600px; }
+	</style>
+	<?meta name="viewport" content="width=device-width, initial-scale=1.0" ?>
+	<window sclass="principal" title="" border="0" height="100%"
+		contentStyle="overflow:auto">
+		<borderlayout height="100%" style="background-color:#fff;">
+			<north height="6em">
+				<hbox hflex="1">
+					<image src="../public/imagenes/bannerSIGEPP.gif"
+						height="6em" width="70em" />
+					<image src="../public/imagenes/extencionDelBanner.gif"
+						height="6em" width="300em"  />
+				</hbox>
+			</north>
+			<west title="Menú" size="25%" splittable="false"
+				collapsible="true">
+				<div height="100%">
+					<include src="VMenu.zul" />
+				</div>
+			</west>
+			<center border="none" flex="true" autoscroll="true">
+				<div align="center">
+					<include id="contenido"></include>
+				</div>
+			</center>
+
+			<south vflex="2" flex="true" border="0" height="3em"
+				collapsible="false">
+				<div sclass="footer">
+					<toolbar id="pie" mold="panel" align="center">
+						<toolbarbutton label="INICIO" />
+						<space />
+						<space />
+						<space />
+						<toolbarbutton label="¿QUIENES SOMOS?" />
+						<space />
+						<space />
+						<space />
+						<toolbarbutton label="CONTACTO" />
+						<space />
+						<space />
+						<space />
+						<toolbarbutton label="AYUDA" />
+					</toolbar>
+					<label style="padding-left:35%;"
+						value="© 2013 Elaborado por Strategy- All Rights Reserved. Terms Privacy">
+					</label>
+				</div>
+			</south>
+		</borderlayout>
+	</window>
+</zk>

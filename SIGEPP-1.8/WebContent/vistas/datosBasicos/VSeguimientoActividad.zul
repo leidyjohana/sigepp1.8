@@ -1,0 +1,50 @@
+<zk>
+	<div class="general" apply="controlador.CSeguimientoActividad">
+		<groupbox width="45em" mold="3d" title="Criterios a evaluar en el seguimiento del pasante">
+			<grid width="100%">
+				<columns visible="false">
+					<column label="" width="20%" />
+					<column label="" width="60%" />
+					<column label="" width="5%" />
+					<column label="" width="15%" />
+				</columns>
+				<rows>
+					<row>
+						<label class="etiqueta" value="Descripcion:" />
+						<textbox class="multilinea"
+							id="txtDescripcionActividad" hflex="1" multiline="true" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="descripcion"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<button id="btnBuscarSeguimientoActividad"
+							label="Buscar" />
+					</row>
+					<row>
+						<label class="etiqueta" value="Factor:" />
+						<textbox id="txtFactorActividad" hflex="1"
+							width="100%" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="factor"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+				</rows>
+			</grid>
+			<div id="botoneraEstandar" />
+			<div id="catalogoSeguimientoActividad" />
+		</groupbox>
+	</div>
+	<!-- 	DETALLES DE LAS AYUDAS    -->
+	<popup id="descripcion" width="300px">
+		<label class="inicioAyuda" value="Seguimiento del Pasante." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value=" " />
+	</popup>
+	<popup id="factor" width="300px">
+		<label class="inicioAyuda" value="Ingrese el factor." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value=" " />
+	</popup>
+</zk>

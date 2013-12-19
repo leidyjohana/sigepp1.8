@@ -1,0 +1,164 @@
+<zk>
+	<div class="general" apply="controlador.CTutorEmpresarial">
+		<groupbox width="45em" mold="3d" title="Tutores Empresarial">
+			<grid width="100%">
+				<columns visible="false">
+					<column label="" width="20%" />
+					<column label="" width="60%" />
+					<column label="" width="4%" />
+					<column label="" width="15%" />
+				</columns>
+				<rows>
+					<row>
+						<label class="etiqueta" value="Cedula:" />
+						<hbox>
+							<radiogroup id="rdbTipoCedulaTutorEmpresarial">
+								<radio id="rdoVenezolano" label="V" />
+								<radio id="rdoExtranjero" label="E" />
+							</radiogroup>
+							<textbox id="txtCedulaTutorEmpresarial" hflex="1" />
+						</hbox>
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="cedula" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<button id="btnBuscarTutorEmpresarial"
+							image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png"
+							class="btnCatalogo" label="" />
+					</row>
+					<row>
+						<label class="etiqueta" value="Primer Nombre:" />
+						<textbox id="txtNombre1TutorEmpresarial" hflex="1" />
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="primerNombre" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Segundo Nombre:" />
+						<textbox id="txtNombre2TutorEmpresarial" hflex="2" />
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="segundoNombre" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Primer Apellido:" />
+						<textbox id="txtApellido1TutorEmpresarial" hflex="1" />
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="primerApellido" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Segundo Apellido:" />
+						<textbox id="txtApellido2TutorEmpresarial" hflex="1" />
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="segundoApellido" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Sexo:" />
+						<radiogroup id="rdbSexoTutorEmpresarial">
+							<radio label="Femenino" value="Femenino" id="rdoFemenino" />
+							<radio label="Masculino" value="Masculino" id="rdoMasculino" />
+						</radiogroup>
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="sexo" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Correo Electronico:" />
+						<textbox id="txtCorreoTutorEmpresarial" hflex="1" />
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="correo" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Telefono1:" />
+						<intbox id="txtTelefono1TutorEmpresarial" hflex="1" />
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="telefono1" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Telefono2:" />
+						<intbox id="txtTelefono2TutorEmpresarial" hflex="1" />
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="telefono2" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Empresa:" />
+						<combobox id="cmbEmpresa" readonly="true" width="100%">
+							<template name="model">
+								<comboitem label="${each.nombre}"></comboitem>
+							</template>
+						</combobox>
+						<image class="imgAyuda" width="100%" height="100%" style="cursor: help"
+							tooltip="empresa" src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+				</rows>
+			</grid>
+			<div id="botoneraEstandar" />
+			<div id="catalogoTutorEmpresarial" />
+		</groupbox>
+	</div>
+	<!-- DETALLES DE LAS AYUDAS -->
+	<popup id="cedula" width="300px">
+		<label class="inicioAyuda" value="Ingrese la cedula de Identidad del Tutor Empresarial." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="09.987.989" />
+	</popup>
+	<popup id="primerNombre" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Primer Nombre del Tutor Empresarial" />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Maria" />
+	</popup>
+	<popup id="segundoNombre" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Segundo Nombre." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Jose" />
+	</popup>
+	<popup id="primerApellido" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Primer Apellido." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Perez" />
+	</popup>
+	<popup id="segundoApellido" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Segundo Apellido." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Rojas" />
+	</popup>
+	<popup id="sexo" width="300px">
+		<label class="inicioAyuda" value="Seleccione el Sexo." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Femenino" />
+	</popup>
+	<popup id="correo" width="300px">
+		<label class="inicioAyuda" value="Ingrese el correo del Tutor Empresarial" />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="mariaperez@hotmail.com" />
+	</popup>
+	<popup id="telefono1" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Numero de telefono." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="04XX-XXXXXXX" />
+	</popup>
+	<popup id="telefono2" width="300px">
+		<label class="inicioAyuda" value="Ingrese el Numero de telefono, si tiene otro." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="02XX-XXXXXXX" />
+	</popup>
+	<popup id="empresa" width="300px">
+		<label class="inicioAyuda" value="Seleccione la Empresa a la cual pertenece el Tutor." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Carlos Mendez" />
+	</popup>
+</zk>

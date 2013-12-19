@@ -1,0 +1,73 @@
+<zk>
+	<div class="general" apply="controlador.CAreaAcademica">
+		<groupbox width="45em" mold="3d" title="Areas Academicas">
+			<grid width="100%">
+				<columns visible="false">
+					<column label="" width="20%" />
+					<column label="" width="60%" />
+					<column label="" width="5%" />
+					<column label="" width="15%" />
+				</columns>
+				<rows>
+					<row>
+						<label class="etiqueta" value="Nombre:" />
+						<textbox id="txtNombreAreaAcademica" hflex="1" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="nombre"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<button id="btnBuscarAreaAcademica"
+							image="/public/imagenes/iconos/botonesAdicionales/buscarNew.png"
+							class="btnCatalogo" />
+					</row>
+					<row>
+						<label class="etiqueta" value="Descripcion:" />
+						<textbox class="multiLinea"
+							id="txtDescripcionAreaAcademica" hflex="1" multiline="true"
+							width="100%" />
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="descripcion"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+					<row>
+						<label class="etiqueta" value="Departamento:" />
+						<combobox id="cmbDepartamento" readonly="true"
+							width="100%">
+							<template name="model">
+								<comboitem label="${each.nombre}" />
+							</template>
+						</combobox>
+						<image class="imgAyuda" width="100%"
+							height="100%" style="cursor: help" tooltip="departamento"
+							src="/public/imagenes/iconos/signoInterrogacion.png" />
+						<hbox />
+					</row>
+				</rows>
+			</grid>
+			<div id="botoneraEstandar" />
+			<div id="catalogoAreaAcademica" />
+		</groupbox>
+	</div>
+	<!-- 	DETALLES DE LAS AYUDAS    -->
+	<popup id="nombre" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese el nombre del Area Academica." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Redes" />
+	</popup>
+	<popup id="descripcion" width="300px">
+		<label class="inicioAyuda"
+			value="Ingrese la descripcion del Area Academica." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Area Academica" />
+	</popup>
+	<popup id="departamento" width="300px">
+		<label class="inicioAyuda"
+			value="Seleccione un Depatamento para la Area Academica." />
+		<separator />
+		<label class="etiquetaEjemplo" value="Ejemplo:" />
+		<label class="ejemplo" value="Area Academica" />
+	</popup>
+</zk>
